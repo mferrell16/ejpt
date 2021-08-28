@@ -1,0 +1,98 @@
+Starting Nmap 7.91 ( https://nmap.org ) at 2021-07-30 14:25 EDT
+Nmap scan report for 172.16.64.101
+Host is up (0.080s latency).
+Not shown: 997 closed ports
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 7.2p2 Ubuntu 4ubuntu2.8 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 7f:b7:1c:3d:55:b3:9d:98:58:11:17:ef:cc:af:27:67 (RSA)
+|   256 5f:b9:93:e2:ec:eb:f7:08:e4:bb:82:d0:df:b9:b1:56 (ECDSA)
+|_  256 db:1f:11:ad:59:c1:3f:0c:49:3d:b0:66:10:fa:57:21 (ED25519)
+8080/tcp open  http    Apache Tomcat/Coyote JSP engine 1.1
+| http-methods: 
+|_  Potentially risky methods: PUT DELETE
+|_http-server-header: Apache-Coyote/1.1
+|_http-title: Apache2 Ubuntu Default Page: It works
+9080/tcp open  http    Apache Tomcat/Coyote JSP engine 1.1
+| http-methods: 
+|_  Potentially risky methods: PUT DELETE
+|_http-server-header: Apache-Coyote/1.1
+|_http-title: Apache2 Ubuntu Default Page: It works
+MAC Address: 00:50:56:A0:E1:7A (VMware)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Nmap scan report for 172.16.64.140
+Host is up (0.054s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE VERSION
+80/tcp open  http    Apache httpd 2.4.18 ((Ubuntu))
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+|_http-title: 404 HTML Template by Colorlib
+MAC Address: 00:50:56:A0:A9:65 (VMware)
+
+Nmap scan report for 172.16.64.182
+Host is up (0.053s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 7.2p2 Ubuntu 4ubuntu2.8 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 7f:b7:1c:3d:55:b3:9d:98:58:11:17:ef:cc:af:27:67 (RSA)
+|   256 5f:b9:93:e2:ec:eb:f7:08:e4:bb:82:d0:df:b9:b1:56 (ECDSA)
+|_  256 db:1f:11:ad:59:c1:3f:0c:49:3d:b0:66:10:fa:57:21 (ED25519)
+MAC Address: 00:50:56:A0:B1:8E (VMware)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Nmap scan report for 172.16.64.199
+Host is up (0.055s latency).
+Not shown: 996 closed ports
+PORT     STATE SERVICE       VERSION
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds?
+1433/tcp open  ms-sql-s      Microsoft SQL Server 2014 12.00.2000.00; RTM
+| ms-sql-ntlm-info: 
+|   Target_Name: WIN10
+|   NetBIOS_Domain_Name: WIN10
+|   NetBIOS_Computer_Name: WIN10
+|   DNS_Domain_Name: WIN10
+|   DNS_Computer_Name: WIN10
+|_  Product_Version: 10.0.10586
+| ssl-cert: Subject: commonName=SSL_Self_Signed_Fallback
+| Not valid before: 2021-07-30T14:56:48
+|_Not valid after:  2051-07-30T14:56:48
+|_ssl-date: 2021-07-30T18:25:27+00:00; +1s from scanner time.
+MAC Address: 00:50:56:A0:2F:64 (VMware)
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 1s, deviation: 0s, median: 0s
+| ms-sql-info: 
+|   172.16.64.199:1433: 
+|     Version: 
+|       name: Microsoft SQL Server 2014 RTM
+|       number: 12.00.2000.00
+|       Product: Microsoft SQL Server 2014
+|       Service pack level: RTM
+|       Post-SP patches applied: false
+|_    TCP port: 1433
+|_nbstat: NetBIOS name: WIN10, NetBIOS user: <unknown>, NetBIOS MAC: 00:50:56:a0:2f:64 (VMware)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2021-07-30T18:25:22
+|_  start_date: 2021-07-30T14:56:46
+
+Post-scan script results:
+| ssh-hostkey: Possible duplicate hosts
+| Key 256 db:1f:11:ad:59:c1:3f:0c:49:3d:b0:66:10:fa:57:21 (ED25519) used by:
+|   172.16.64.101
+|   172.16.64.182
+| Key 256 5f:b9:93:e2:ec:eb:f7:08:e4:bb:82:d0:df:b9:b1:56 (ECDSA) used by:
+|   172.16.64.101
+|   172.16.64.182
+| Key 2048 7f:b7:1c:3d:55:b3:9d:98:58:11:17:ef:cc:af:27:67 (RSA) used by:
+|   172.16.64.101
+|_  172.16.64.182
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 4 IP addresses (4 hosts up) scanned in 26.61 seconds

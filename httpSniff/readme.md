@@ -19,3 +19,4 @@ Note: right click and follow TCP stream to view easier.
 user=hello&pass=goodbye&login=loginH
 ```
 4. repeat for https website and see encrypted form 
+s
